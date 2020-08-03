@@ -1,6 +1,7 @@
 const searchInput = document.getElementById("search");
 const searchButton = document.getElementById("searchButon");
 const picture = document.getElementById("picture");
+const divContainer = document.getElementById("divContainer");
 let currentPokemon = "";
 
 const getData = async (currentPokemon) => {
@@ -9,8 +10,13 @@ const getData = async (currentPokemon) => {
 }
 
 const searchPokemon = async (pokemonId) => {
-  const { data } = await axios.get(`http://pokeapi.co/api/v2/pokemon/${pokemonId}`);
-  makeDiv(data.name, data.height, data.weight, data.sprites.front_default, data.sprites.back_default);
+  try {
+    const { data } = await axios.get(`http://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+    makeDiv(data.name, data.height, data.weight, data.sprites.front_default, data.sprites.back_default);
+  }
+  catch (e) {
+    window.alert("no such pokemon!");
+  }
 };
 
 const makeDiv = (name, height, weight, picture, back) => {
@@ -23,13 +29,9 @@ const makeDiv = (name, height, weight, picture, back) => {
         <div>Pokemon Image: <br> <img src="${picture}"
         onmouseover="this.src='${back}';"
         onmouseout="this.src='${picture}';"/></div>`
-
-
   pokemonDiv.innerHTML = htmlText;
-
+  searchInput.value = "";
 }
-// picture.onmouseover = () => picture.src = res.data.sprites.back_default;
-// picture.onmouseout = () => picture.src = res.data.sprites.front_default;
 
 
 
