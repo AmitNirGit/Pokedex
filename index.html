@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+  <link rel="stylesheet" type="text/css" href="pokedexCss.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
 </head>
+
 <body>
-  <input id="search" /><button id="searchButon">Search</button>
-  <div id="results">
+  <h1>Amit's Pokedex</h1>
+  <div id="searchBar">
+    <input id="search" placeholder="Enter id here" /><button id="searchButon">Search</button>
   </div>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!-- todo later: use a local copy installed via npm -->
-  <script src="./main.js"></script>  <!-- todo: change to type:module -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- todo later: use a local copy installed via npm -->
+
+  <div id="divContainer" class="container"></div>
+  <div id="typeListDiv" class="container"></div>
+
+  <script src="./main.js"></script> <!-- todo: change to type:module -->
 </body>
+
 </html>
