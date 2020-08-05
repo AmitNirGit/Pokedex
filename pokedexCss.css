@@ -1,0 +1,79 @@
+body {
+    background-color: orangered;
+    color: white;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 54px;
+}
+#searchBar {
+    margin: auto;
+  width: 10%;
+  padding: 10px;
+
+}
+
+
+
+
+.container {
+    
+    padding: 40px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 20px;
+    color: #222;
+  text-align: center;
+}
+#typeListDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    padding-inline-start: 0;
+    color: #f4f4f4;
+}
+
+#divContainer{
+    background-color: #f4f4f4;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 2px solid black;
+    width: 200px;
+}
+
+
+.card-title {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-size: 32px;
+    font-weight: normal;
+}
+.types {
+    margin-top: 5px;
+    font-weight: lighter;
+}
+
+.card-image {
+    height: 180px;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
